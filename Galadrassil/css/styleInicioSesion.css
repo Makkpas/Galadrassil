@@ -1,0 +1,170 @@
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+:root{
+    --primary: rgb(8, 117, 4);
+    --secondary: #033803;
+
+    --white: #f8f8f8;
+    --dark: #141414;
+    --gray: #eeeeee;
+
+    --facebook: #465898;
+    --google: #c24e3a;
+    --linkedin: #5874a7;
+}
+
+.app{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: url("http://www.teorema.com.mx/wp-content/uploads/10-abosques.jpg");
+    height: 100vh;
+}
+
+body{
+    font-family: 'Gayathri', sans-serif;
+}
+
+.login-form{
+    height: 45%;
+    width: 25%;
+    border: 1.5px solid var(--secondary);
+}
+
+.dividir{
+    color: white;
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+.login-form{
+    margin: 1rem;
+    background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-right: none;
+    border-radius: 20px;
+}
+
+.login__title{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.login__text{
+    text-align: center;
+    margin-bottom: 0.75rem; 
+    color: white;
+}
+
+.login__form{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.form__input{
+    margin-bottom: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    background: var(--gray);
+    border: none;
+    border-radius: 4px;
+}
+
+.login__text--link{
+    text-decoration: none;
+    margin: 0.75rem 0;
+    opacity: 0.5;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.login__text--link:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.container-btn{
+    display: block
+}
+
+.btn{
+    display: block;
+    width: auto;
+    opacity: 1;
+    background: var(--secondary);
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    color: var(--white);
+    border: none;
+    font-weight: bold;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.welcome__btn{
+    display: block;
+    width: auto;
+    opacity: 1;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    color: var(--secondary);
+    border: 1.5px solid var(--secondary);
+    font-weight: bold;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.welcome__btn:hover{
+    background: #00000050;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
