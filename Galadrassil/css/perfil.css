@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.root{
+    --header: #629044;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+
+    background: #629044;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__tittle, .header__menu{
+    display: block;
+    float: left;
+    line-height: 10vh; 
+    color: aliceblue; 
+    font-weight: 700; 
+}
+
+
+
+.header__tittle{
+    position: absolute;
+    left: 20%;
+
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 75px;
+    /* identical to box height */
+
+    color: #201B1D;
+}
+
+.header__avatar{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.header__menu{
+    position: absolute;
+    right: 5%;
+    
+}
+
+.menu__button{
+    padding: .5rem 3rem;
+
+    background: #965739;
+    border: 8px solid #201B1D;
+    border-radius: 58px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+
+    color: #201B1D;
+
+}
+
+.main{
+    width: 100%;
+    height: 80vh;
+
+    display: grid;
+
+    grid-template-columns: 12% 1fr 12%;
+    grid-template-rows: 12% 1fr 1fr 12%;
+
+    grid-template-areas: 
+    'top top top'
+    'margin1 score margin2'
+    'margin3 chart margin4'
+    'bottom bottom bottom';
+}
+
+.main__score{
+    grid-area: score;
+    width: 100%;
+    height: 50%;
+    
+
+}
+.score{
+    
+    text-align: center;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 75px;
+    /* identical to box height */
+
+    color: #201B1D;
+}
+
+.main__charts{
+    grid-area: chart;
+    background: chartreuse;
+}
+
+.footer{
+    width: 100%;
+    height: 10vh;
+
+    position: relative;
+    
+    background: #1E1D1E;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    
+    position: absolute;
+    top: 50%;
+    left: 5%;
+
+    transform: translateY(-50%);
+}
+
+.iconify{
+    color: #629044;
+}
