@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    background-image: url("http://www.teorema.com.mx/wp-content/uploads/10-abosques.jpg");
+    background-image: url("https://images.unsplash.com/photo-1487621167305-5d248087c724?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
     height: 100vh;
 }
 
@@ -48,7 +48,6 @@ body{
 .login-form{
     height: 45%;
     width: 25%;
-    border: 1.5px solid var(--secondary);
 }
 
 .dividir{
@@ -77,9 +76,10 @@ body{
 }
 
 .login__title{
-    font-size: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 0.75rem;
     color: white;
 }
 
@@ -101,25 +101,25 @@ body{
 }
 
 .form__input{
-    margin-bottom: 0.75rem;
-    padding: 0.35rem 0.75rem;
+    margin-bottom: 0.2rem;
+    padding: 0.75rem 1rem;
     background: var(--gray);
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+#email{
+    margin-bottom: 0.7rem; 
 }
 
 .login__text--link{
     text-decoration: none;
-    margin: 0.75rem 0;
-    opacity: 0.5;
+    font-size: 0.8rem;
+    margin: 0.3rem 0 0.5rem 0 ;
     -webkit-transition: 0.3s all;
     -o-transition: 0.3s all;
     transition: 0.3s all;
-}
-
-.login__text--link:hover{
-    text-decoration: underline;
-    opacity: 1;
 }
 
 .container-btn{
@@ -131,13 +131,12 @@ body{
     width: auto;
     opacity: 1;
     background: var(--secondary);
-    text-transform: uppercase;
     margin: 0 auto;
     padding: 0.75rem 1rem;
     font-size: 0.8rem;
     border-radius: 20px;
-    color: var(--white);
-    border: none;
+    color: white;
+    border: none/*1.5px solid white*/;
     font-weight: bold;
     -webkit-transition: 0.3s all;
     -o-transition: 0.3s all;
@@ -148,23 +147,32 @@ body{
     display: block;
     width: auto;
     opacity: 1;
+    margin-top: 2px;
     background: transparent;
-    text-transform: uppercase;
     padding: 0.75rem 1rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    font-weight: bold;
     border-radius: 20px;
-    color: var(--secondary);
-    border: 1.5px solid var(--secondary);
+    border: none;
+    color: var(--white);
     font-weight: bold;
     -webkit-transition: 0.3s all;
     -o-transition: 0.3s all;
     transition: 0.3s all;
+    text-decoration: none;
 }
 
 .welcome__btn:hover{
-    background: #00000050;
+    text-decoration: underline;
+    opacity: 0.6;
 }
 
 .btn:hover{
-    opacity: 0.8;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.login__text--link:hover{
+    text-decoration: underline;
+    opacity: 0.6;
 }
