@@ -27,36 +27,19 @@
     --white: #f8f8f8;
     --dark: #141414;
     --gray: #eeeeee;
-
-    --facebook: #465898;
-    --google: #c24e3a;
-    --linkedin: #5874a7;
 }
 
-.app{
+.passwordPage{
     display: flex;
     align-items: center;
     width: 100%;
-    background-image: url("https://images.unsplash.com/photo-1487621167305-5d248087c724?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
+    background-image: url("https://images.unsplash.com/photo-1488330890490-c291ecf62571?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=180");
     height: 100vh;
 }
 
-body{
-    font-family: 'Gayathri', sans-serif;
-}
-
-.login-form{
+.forgot-form{
     height: 45%;
-    width: 25%;
-}
-
-.dividir{
-    color: white;
-    margin: 0.5rem;
-    font-weight: bold;
-}
-
-.login-form{
+    width: auto;
     margin: 1rem;
     background: transparent;
     display: -webkit-box;
@@ -75,21 +58,15 @@ body{
     border-radius: 20px;
 }
 
-.login__title{
+.page__title{
     display: flex;
+    margin-bottom: 0.8rem;
     flex-wrap: wrap;
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.2rem;
     color: white;
 }
 
-.login__text{
-    text-align: center;
-    margin-bottom: 0.75rem; 
-    color: white;
-}
-
-.login__form{
+.email__form{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -100,9 +77,18 @@ body{
             flex-direction: column;
 }
 
-.form__input{
+.forgot-container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-left: 5rem;
+    margin-top: 70%;
+}
+
+.email__input{
     margin-bottom: 0.2rem;
     padding: 0.75rem 1rem;
+    width: 15rem;
     background: var(--gray);
     border: none;
     border-radius: 8px;
@@ -113,27 +99,18 @@ body{
     margin-bottom: 0.7rem; 
 }
 
-.login__text--link{
-    text-decoration: none;
-    font-size: 0.8rem;
-    margin: 0.3rem 0 0.5rem 0 ;
-    -webkit-transition: 0.3s all;
-    -o-transition: 0.3s all;
-    transition: 0.3s all;
-}
-
 .container-btn{
     display: block
 }
 
 .btn{
     display: block;
-    width: auto;
+    width: 3cm;
     opacity: 1;
     background: var(--secondary);
     margin: 0 auto;
-    padding: 0.75rem 1rem;
-    font-size: 0.8rem;
+    padding: 0.7rem 0.75rem;
+    font-size: 1rem;
     border-radius: 20px;
     color: white;
     border: none;
@@ -143,14 +120,14 @@ body{
     transition: 0.3s all;
 }
 
-.welcome__btn{
+.back__btn{
     display: block;
     width: auto;
     opacity: 1;
     margin-top: 2px;
     background: transparent;
-    padding: 0.75rem 1rem;
-    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     border-radius: 20px;
     border: none;
@@ -162,7 +139,7 @@ body{
     text-decoration: none;
 }
 
-.welcome__btn:hover{
+.back__btn:hover{
     text-decoration: underline;
     opacity: 0.6;
 }
@@ -170,9 +147,4 @@ body{
 .btn:hover{
     opacity: 0.7;
     cursor: pointer;
-}
-
-.login__text--link:hover{
-    text-decoration: underline;
-    opacity: 0.6;
 }
