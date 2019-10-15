@@ -38,14 +38,22 @@ tree.addEventListener('click', ()=>{
     stick.forEach(stick=>{
         stick.style.display = 'flex';
     });
+    cares.forEach(care=>{
+        care.style.display = 'none';
+    });
     backdrop.style.display = 'block';
+    sidebar.style.display = 'none'
 });
 
 care.addEventListener('click', ()=>{
     cares.forEach(care=>{
         care.style.display = 'flex';
     });
+    stick.forEach(stick=>{
+        stick.style.display = 'none';
+    });
     backdrop.style.display = 'block';
+    sidebar.style.display = 'none'
 });
 
 backdrop.addEventListener('click', ()=>{
@@ -58,7 +66,7 @@ backdrop.addEventListener('click', ()=>{
 
     sidebar.style.display = 'none'
     sidebar.style.trasition = '0.4s'
-    
+    backdrop.style.display = 'none';
 });
 
 
