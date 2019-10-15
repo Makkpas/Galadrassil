@@ -148,3 +148,102 @@
     opacity: 0.7;
     cursor: pointer;
 }
+
+/* portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (orientation: portrait) {
+
+    .passwordPage{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: auto;
+        background: #629044;
+        height: 100vh;
+    }
+
+    .forgot-form{
+        display: flex;
+        width: auto;
+        align-content: center;
+        justify-content: center;
+        transform: translateY(-35%);
+    }
+
+    .forgot-container{
+        display: flex;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .btn{
+        display: flex;
+        width: 3cm;
+        opacity: 1;
+        background: var(--secondary);
+        margin: 0 auto;
+        padding: 0.7rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 20px;
+        color: white;
+        border: none;
+        font-weight: bold;
+        -webkit-transition: 0.3s all;
+        -o-transition: 0.3s all;
+        transition: 0.3s all;
+    }
+
+    .back__btn{
+        display: flex;
+        width: auto;
+        opacity: 1;
+        margin-top: 2px;
+        background: transparent;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        color: var(--white);
+        font-weight: bold;
+        -webkit-transition: 0.3s all;
+        -o-transition: 0.3s all;
+        transition: 0.3s all;
+        text-decoration: none;
+        transform: translateX(15%);
+    }
+
+    .email__form{
+        display: flex;
+    }
+
+    .send__btn{
+        transform: translateX(-45%);
+        text-align: center;
+        padding-left: 2rem;
+    }
+
+    .email__input{
+        display: flex;
+        margin-bottom: 0.2rem;
+        padding: 0.75rem 1rem;
+        width: 15rem;
+        background: var(--gray);
+        border: none;
+        border-radius: 8px;
+        opacity: 0.8;
+        transform: translateX(-20%);
+    }
+
+    .page__title{
+        display: flex;
+        transform: translateX(-10%);
+        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+        color: white;
+    }
+    
+}

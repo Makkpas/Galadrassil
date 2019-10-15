@@ -176,3 +176,32 @@ body{
     text-decoration: underline;
     opacity: 0.6;
 }
+
+/* portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (orientation: portrait) {
+
+    .app{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: #629044;
+        height: 100vh;
+        transform: translateY(-5%);
+    }
+
+    .login__title{
+        margin: 1rem;
+    }
+
+    .login__text--link{
+        margin: 0.5rem;
+    }
+
+    .form__input{
+        margin: 0.2rem;
+    }
+}
