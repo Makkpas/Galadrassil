@@ -1,0 +1,404 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.root{
+    --header: #629044;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+
+    background: #629044;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__tree, .header__care{
+    display: none;
+}
+
+.header__tittle, .header__menu{
+    display: block;
+    float: left;
+    line-height: 10vh; 
+    color: aliceblue; 
+    font-weight: 700; 
+}
+
+
+
+.header__tittle{
+    position: absolute;
+    left: 20%;
+
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 75px;
+    /* identical to box height */
+
+    color: #201B1D;
+}
+
+.header__avatar{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.header__menu{
+    position: absolute;
+    right: 5%;
+    
+}
+
+
+.sidebar, .menu__sidebar{
+    display: none;
+}
+
+.menu__button{
+    padding: .5rem 3rem;
+
+    background: #965739;
+    border: 8px solid #201B1D;
+    border-radius: 58px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+
+    color: #201B1D;
+
+}
+
+.main{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 12% 1fr 12%;
+    grid-template-rows: 12% 1fr 1fr 12%;
+
+    grid-template-areas: 
+    'top top top'
+    'margin1 score margin2'
+    'margin3 chart margin4'
+    'bottom bottom bottom';
+}
+
+/* STICKS------------------------------------------------------------------------------ */
+.main__sticks{
+
+    display: flex;
+    flex-direction: column;
+    
+
+
+    width: 15vw;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-30%);
+
+}
+
+.stick{
+    width: 100%;
+    height: 5rem;
+    display: block;
+    position: relative;
+    margin: .5rem 0rem;
+}
+.tag__stick{
+    position: absolute;
+    width: 1rem;
+    height: 5rem;
+    left: 100%;
+}
+
+.leaf{
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    color: black;
+}
+
+.stick--guanacaste{
+    background: #6C9E00;
+}
+
+.tag--guanacaste{
+    background: #9FBA66;
+}
+
+.stick--pochote{
+    background: #860000;
+}
+
+.tag--pochote{
+    background: #8C5959;
+}
+
+.stick--caoba{
+    background: #0058BF;
+}
+
+.tag--caoba{
+    background: #7C98B8;
+}
+
+.stick--cortes-amarillo{
+    background: #CFC700;
+}
+
+.tag--cortes-amarillo{
+    background: #CECB89;
+}
+
+.stick--malinche{
+    background: #410052;
+}
+
+.tag--malinche{
+    background: #513159;
+}
+/* ------------------------------------------------------------------------------ */
+
+
+/* Cares--------------------------------------------------------------------------------- */
+.main__cares{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+
+
+    width: 16rem;
+    height: 5rem;
+}
+
+.care{
+    position: relative;
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+    margin-left: 1rem;
+
+    /* background: blueviolet; */
+}
+
+.supply{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+
+   
+    color: black;
+}
+
+.tag__care{
+    height: 1rem;
+    width: 100%;
+    position: absolute;
+}
+.care--water{
+    background: #10959D;
+}
+.tag--water{
+    background: #0F686D;
+}
+
+.care--fertilizer{
+    background: #39AF53;
+}
+
+.tag--fertilizer{
+    background: #09601C;
+}
+/* --------------------------------------------------------------------------------- */
+
+
+.footer{
+    width: 100%;
+    height: 10vh;
+
+    position: relative;
+    
+    background: #1E1D1E;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    
+    position: absolute;
+    top: 50%;
+    left: 5%;
+
+    transform: translateY(-50%);
+}
+
+.iconify--color{
+    color: #629044;
+}
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (orientation: portrait) {
+
+    .header{
+        position: relative;
+        width: 100%;
+        height: 10vh;
+    
+        background: #629044;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .header__tree{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+    }
+    .header__care{
+        display: flex;
+    }
+
+    .header__tittle{
+        display: none;
+    }
+
+    .header__avatar{
+        display: none;
+    }
+
+    .menu__sidebar{
+        display: block;
+    }
+    .menu__button{
+        display: none;
+    }
+    .sidebar-icon{
+        margin-top: 50%;
+    }
+    .sidebar-icon2{
+        margin-top: 70%;
+        margin-left: 50%;;
+    }
+    .sidebar{
+        display: none;
+        width: 10rem;
+        height: 60vh;
+        background: #503C0A;
+        z-index: 2;
+    }
+    .sidebar__list{
+        width: 100%;
+        height: 100%;
+
+    }
+    
+    .list{
+        list-style:  none;
+    }
+
+    .link{
+        text-decoration: none;
+        display: block;
+        margin: 1rem;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height */
+
+        color: #FFFFFF;
+    }
+    
+    .backdrop{
+        /* background: #000; */
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .7;
+        /* filter: blur(50%); */
+        z-index: 1;
+        display: none;
+    }
+
+    .main{
+        width: 100%;
+        height: 90vh;
+    }
+    
+    .blur{
+        filter: blur(.1rem);
+    }
+
+    .stick{
+        display: none;
+    }
+
+    .tag__stick{
+        height: 100%;
+    }
+
+    .leaf{
+        position: absolute;
+        width: 30px;
+        left: 20%;
+        top: 10%;
+        color: black;
+    }
+
+    .main__cares{
+        position: absolute;
+        bottom: 0%;
+        display: inline-flex;
+        width: 18rem;
+    }
+
+    .care{
+        display: none;
+    
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .supply{
+        position: absolute;
+        left: 25%;
+        top: 25%;
+        width: 30px;
+   
+        color: black;
+    }
+
+    .footer{
+        display: none;
+    }
+}

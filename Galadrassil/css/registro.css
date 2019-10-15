@@ -10,6 +10,16 @@
     background-image: url("../img/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg");
 }
 
+
+.button--menu{
+    display: none;
+}
+
+.sidebar{
+    display: none;
+}
+
+
 .form{
     width: 100%;
     height: 100VH;
@@ -30,8 +40,6 @@
     grid-area: register;
     display: flex;
     flex-direction: column;
-
-    
 }
 
 .register__tittle{
@@ -108,4 +116,191 @@
     line-height: 16px;
 
     color: #FFFFFF;
+}
+
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (orientation: portrait) {
+
+    .background{
+        position: relative;
+        width: 100vw;
+        height: 100vh; 
+        background: #503C0A;
+    }
+
+    .background__menu{
+        
+        position: absolute;
+        left: 72%;
+        top: 2%;
+        width: 100%;
+        height: 4rem;
+    }
+
+    .button--menu{
+        width: 5rem;
+        display: block;
+        border: none;
+        /* background: transparent; */
+    }
+
+    .iconify--menu-normal{
+        position: absolute;
+        left: 10%;
+        color: white;    
+    }
+
+    .iconify--menu{
+        margin-top: 20%;
+        margin-left: 30%;
+        color: white;    
+    }
+
+    .sidebar{
+        /* display: none; */
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        left: 50%;
+        z-index: 1;
+
+        background: #629044;
+    }
+
+    .list{
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: 40vh;
+    }
+    
+    .icon{
+        width: 5rem;
+        height: 5rem;
+        
+    }
+    .iconify--menu{
+       
+        display: block;
+        color: white;
+        
+    }
+    .sidebar__list{
+        display: block;
+        list-style: none;
+    }
+
+    .sidebar__login
+    {
+        width: 100%;
+        height: 2rem;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height */
+
+        color: #FFFFFF;
+    }
+
+    .form{
+        width: 90%;
+        height: 100VH;
+        display: grid;
+        position: relative;
+    
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 5% 1fr 5%;
+    
+        grid-template-areas:
+        'top top top'
+        'margin1 register margin2'
+        'margin3 bottom margin4';
+    }
+
+    .blur{
+        filter: blur(.1rem);
+    }
+
+    .form__register{
+        position: absolute;
+        left: 10%;
+        top: 50%;
+
+        transform: translateX(-10%);
+        transform: translateY(-50%);
+        grid-area: register;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .register__tittle{
+        margin-bottom: 1rem;
+    
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 28px;
+    
+        color: #FFFFFF;
+    }
+    
+    .input__form{
+        margin: .3rem 0rem;
+        padding: .8rem 3rem .8rem 1rem;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: black;
+
+
+        border-radius: 4px;
+        border: none;
+        background: rgba(211, 211, 211, 0.774);
+    }
+
+    .register__buttom{
+        padding: .4rem 3rem;
+        margin-top: 1rem;
+
+
+        background: #629044;
+        border: 5px solid #201B1D;
+        box-sizing: border-box;
+        border-radius: 33px; 
+
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: #1E1D1E;
+    }
+
+
+    .form__login{
+        position: relative;
+    }
+
+    .login{
+
+        display: none;
+    }
+    
 }
