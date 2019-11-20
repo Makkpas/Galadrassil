@@ -40,7 +40,7 @@
                                     <button class="register__buttom" type="submit">Registarse</button>
                             </div>
                             <div class="form__login">
-                                <a class="login" href="inicioSesion.html">Iniciar Sesión</a>
+                                <a class="login" href="inicioSesion.php">Iniciar Sesión</a>
                             </div>
                     </div>
             </div>

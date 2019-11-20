@@ -24,10 +24,10 @@
                     <a href="contraseñaOlvidada.html" class="login__text login__text--link">¿Olvidó su contraseña?</a>
 
                     <div class="container-btn">
-                        <a class="btn login__btn" href="jardin.html">Iniciar Sesión</a
+                        <a class="btn login__btn" href="jardin.php">Iniciar Sesión</a
                     </div>
                     <div class="container-btn registarse">
-                        <a class="btn welcome__btn" href="registro.html">Registrarse</a>
+                        <a class="btn welcome__btn" href="registro.php">Registrarse</a>
                     </div>
                 </form>
 

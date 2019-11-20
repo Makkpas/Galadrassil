@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/jardin.css">
 </head>
 <body>
+   
+    <?php include './inc/scripts.php'; ?>
+   
     <header class="header">
         <div class="header__tree">
             <a id="tree" href="#">
@@ -37,9 +40,9 @@
                         <svg class="sidebar-icon2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="50" height="50" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M20 5V2H0v3h20zm0 6V8H0v3h20zm0 6v-3H0v3h20z" fill="white"/></svg>
                     </a>
                     <ul class="sidebar__list">
-                        <li class="list"><a class="link" href="perfil.html">Perfil</a></li>
-                        <li class="list"><a class="link" href="perfil.html">Tablas</a></li>
-                        <li class="list"><a class="link" href="inicioSesion.html">Cerrar Sesion</a></li>
+                        <li class="list"><a class="link" href="perfil.php">Perfil</a></li>
+                        <li class="list"><a class="link" href="topPuntajes.php">Tablas</a></li>
+                        <li class="list"><a class="link" href="inicioSesion.php">Cerrar Sesion</a></li>
                     </ul>
             </div>
         </div>
@@ -93,6 +96,6 @@
         </div>
     </footer>
    
-    <?php include './inc/scripts.php';?>
+    
 </body>
 </html>
