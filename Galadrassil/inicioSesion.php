@@ -24,7 +24,7 @@
                     <a href="contraseñaOlvidada.html" class="login__text login__text--link">¿Olvidó su contraseña?</a>
 
                     <div class="container-btn">
-                        <button class="btn login__btn" type="submit">Iniciar Sesión</button>
+                        <a class="btn login__btn" href="jardin.html">Iniciar Sesión</a
                     </div>
                     <div class="container-btn registarse">
                         <a class="btn welcome__btn" href="registro.html">Registrarse</a>
@@ -35,6 +35,7 @@
         </div>
 
     </div>
+
 </body>
 
 </html>
