@@ -66,22 +66,14 @@
     display: none;
 }
 
-.menu__button{
-    padding: .5rem 3rem;
 
-    background: #965739;
-    border: 8px solid #201B1D;
-    border-radius: 58px;
+.menu__sidebar{
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 36px;
-
-    color: #201B1D;
-
+    display: flex;
+    align-items: center;
 }
+
+
 
 .main{
     width: 100%;
