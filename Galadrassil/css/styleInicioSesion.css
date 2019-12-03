@@ -21,28 +21,24 @@
 }
 
 :root{
-    --primary: rgb(8, 117, 4);
-    --secondary: #033803;
+    --backgroudColor: #94D794;
+    --btnColor: #36CC7C;
 
-    --white: #f8f8f8;
-    --dark: #141414;
+    --fontColor: #ffffff;
+
     --gray: #eeeeee;
-
-    --facebook: #465898;
-    --google: #c24e3a;
-    --linkedin: #5874a7;
 }
 
 .app{
     display: flex;
     align-items: center;
     width: 100%;
-    background-image: url("https://images.unsplash.com/photo-1487621167305-5d248087c724?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
     height: 100vh;
 }
 
 body{
     font-family: 'Gayathri', sans-serif;
+    background:var(--backgroudColor);
 }
 
 .login-form{
@@ -51,7 +47,7 @@ body{
 }
 
 .dividir{
-    color: white;
+    color: var(--fontColor);
     margin: 0.5rem;
     font-weight: bold;
 }
@@ -80,13 +76,13 @@ body{
     flex-wrap: wrap;
     font-size: 1.5rem;
     text-align: center;
-    color: white;
+    color: var(--fontColor);
 }
 
 .login__text{
     text-align: center;
     margin-bottom: 0.75rem; 
-    color: white;
+    color:var(--fontColor);
 }
 
 .login__form{
@@ -123,19 +119,20 @@ body{
 }
 
 .container-btn{
-    display: block
+    display: block;
+    
 }
 
 .btn{
     display: block;
     width: auto;
     opacity: 1;
-    background: var(--secondary);
+    background: var(--btnColor);
     margin: 0 auto;
     padding: 0.75rem 1rem;
     font-size: 0.8rem;
     border-radius: 20px;
-    color: white;
+    color:var(--fontColor);
     border: none;
     font-weight: bold;
     -webkit-transition: 0.3s all;
@@ -154,7 +151,7 @@ body{
     font-weight: bold;
     border-radius: 20px;
     border: none;
-    color: var(--white);
+    color: var(--fontColor);
     font-weight: bold;
     -webkit-transition: 0.3s all;
     -o-transition: 0.3s all;
@@ -175,33 +172,4 @@ body{
 .login__text--link:hover{
     text-decoration: underline;
     opacity: 0.6;
-}
-
-/* portrait */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 740px) 
-  and (orientation: portrait) {
-
-    .app{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        background: #629044;
-        height: 100vh;
-        transform: translateY(-5%);
-    }
-
-    .login__title{
-        margin: 1rem;
-    }
-
-    .login__text--link{
-        margin: 0.5rem;
-    }
-
-    .form__input{
-        margin: 0.2rem;
-    }
 }

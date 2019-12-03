@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro</title>
 
+    <?php require './inc/styles.php'?>
     <link rel="stylesheet" href="./css/registro.css">
 </head>
 <body>

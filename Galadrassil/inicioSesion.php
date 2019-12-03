@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inicio de Sesion</title>
 
+    <?php require './inc/styles.php'?>
     <link rel="stylesheet" href="./css/styleInicioSesion.css">
 
 </head>
@@ -21,7 +22,7 @@
                     <input class="form__input" type="email" id="email" name="email" placeholder="Correo">
                     <input class="form__input" type="password" id="Password" name="password" placeholder="Contraseña">
 
-                    <a href="contraseñaOlvidada.html" class="login__text login__text--link">¿Olvidó su contraseña?</a>
+                    <a href="contraseñaOlvidada.php" class="login__text login__text--link">¿Olvidó su contraseña?</a>
 
                     <div class="container-btn">
                         <a class="btn login__btn" href="jardin.php">Iniciar Sesión</a

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jardín</title>
 
-    
+    <?php require './inc/styles.php'?>
     <link rel="stylesheet" href="css/jardin.css">
 </head>
 <body>

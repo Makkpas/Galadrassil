@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recuperación de Contraseña</title>
 
+    <?php require './inc/styles.php'?>
     <link rel="stylesheet" href="./css/styleContraseña.css">
 
 </head>
@@ -24,7 +25,7 @@
                         <button class="btn send__btn" type="submit">Enviar</button>
                     </div>
                     <div class="container-btn volver">
-                        <a class="btn back__btn" href="inicioSesion.html">Volver</a>
+                        <a class="btn back__btn" href="inicioSesion.php">Volver</a>
                     </div>
                 </form>
 
