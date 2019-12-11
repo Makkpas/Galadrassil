@@ -1,3 +1,14 @@
+<?php
+session_start();
+//session_destroy();
+
+if (isset($_SESSION['user'])) {
+	header('Location: jardin.php');
+	exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,18 +29,26 @@
 
                 <h2 class="login__title">Inicia Sesión</h2>
 
-                <form class="login__form" autocomplete="on">
+                <form action="login.php" method="POST" class="login__form" autocomplete="on">
                     <input class="form__input" type="email" id="email" name="email" placeholder="Correo">
                     <input class="form__input" type="password" id="Password" name="password" placeholder="Contraseña">
 
                     <a href="contraseñaOlvidada.php" class="login__text login__text--link">¿Olvidó su contraseña?</a>
 
                     <div class="container-btn">
-                        <a class="btn login__btn" href="jardin.php">Iniciar Sesión</a
+                        <input class="btn login__btn" type="submit" value="Iniciar Sesión">
                     </div>
                     <div class="container-btn registarse">
                         <a class="btn welcome__btn" href="registro.php">Registrarse</a>
                     </div>
+                    <?php
+                                if (isset($_SESSION['error']) && $_SESSION['error']) {
+                                    echo '<span class="error">' . $_SESSION['msj'] . '</span>';
+
+                                    unset($_SESSION['error']);
+                                    unset($_SESSION['msj']);
+                                }
+                            ?>
                 </form>
 
             </div>

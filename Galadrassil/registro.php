@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,20 +33,30 @@
             <div class="form">
                     <div class="form__register">
                             <H2 class="register__tittle">Registro</H2>
-                            <form class="register__form" autocomplete="on" action="">
-                                <input class="input__form form__user" type="user" id="user" name="user" placeholder="Usuario">
-                                <input class="input__form form__name" type="name" id="name" name="name" placeholder="Nombre completo">
+                            <form action="signin.php" method="POST" class="register__form" autocomplete="on">
+                                <input class="input__form form__user" type="text" id="user" name="usuario" placeholder="Usuario">
+                                <input class="input__form form__name" type="text" id="name" name="name" placeholder="Nombre completo">
                                 <input class="input__form form__email" type="email" id="email" name="email" placeholder="Email">
                                 <input class="input__form form__password" type="password" id="password" name="password" placeholder="Contraseña">
-                                <input class="input__form form__password2" type="password2" id="password2" name="password2" placeholder="Confirme Contraseña">
+                                <input class="input__form form__password2" type="password" id="password2" name="password2" placeholder="Confirme Contraseña">
+                            
+                                <div class="form__buttom">
+                                    <input class="register__buttom" type="submit" value="Registrar">
+                                </div>
+                                <div class="form__login">
+                                    <a class="login" href="inicioSesion.php">Iniciar Sesión</a>
+                                </div>
+
+                                <?php
+                                    if (isset($_SESSION['error']) && $_SESSION['error']) {
+                                        echo '<span class="error">' . $_SESSION['msj'] . '</span>';
+
+                                        unset($_SESSION['error']);
+                                        unset($_SESSION['msj']);
+                                    }
+                                ?>
                             </form>
-                
-                            <div class="form__buttom">
-                                    <button class="register__buttom" type="submit">Registarse</button>
-                            </div>
-                            <div class="form__login">
-                                <a class="login" href="inicioSesion.php">Iniciar Sesión</a>
-                            </div>
+
                     </div>
             </div>
     </div>
