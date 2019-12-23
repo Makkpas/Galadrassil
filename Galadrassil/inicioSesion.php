@@ -18,20 +18,22 @@ if (isset($_SESSION['user'])) {
     <title>Inicio de Sesion</title>
 
     <?php require './inc/styles.php'?>
-    <link rel="stylesheet" href="./css/styleInicioSesion.css">
+    <link rel="stylesheet" href="./Assets/css/sidebar.css">
+    <link rel="stylesheet" href="./Assets/css/styleInicioSesion.css">
 
 </head>
 
 <body>
+    <?php require './inc/sidebar.php'?>
     <div class="app">
-        <div class="login-form">
+        <div id='login-form' class="login-form">
             <div class="form-container">
 
                 <h2 class="login__title">Inicia Sesión</h2>
 
                 <form action="login.php" method="POST" class="login__form" autocomplete="on">
-                    <input class="form__input" type="email" id="email" name="email" placeholder="Correo">
-                    <input class="form__input" type="password" id="Password" name="password" placeholder="Contraseña">
+                    <input id="email" class="form__input" type="text" id="email" name="email" placeholder="Correo">
+                    <input id="password" class="form__input" type="password" id="Password" name="password" placeholder="Contraseña">
 
                     <a href="contraseñaOlvidada.php" class="login__text login__text--link">¿Olvidó su contraseña?</a>
 
@@ -55,7 +57,8 @@ if (isset($_SESSION['user'])) {
         </div>
 
     </div>
-
+    <?php include './inc/scripts.php'?>
+    <script src="./Assets/js/app.js"></script>
 </body>
 
 </html>

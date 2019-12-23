@@ -1,3 +1,5 @@
+
+
 *{
     padding: 0;
     margin: 0;
@@ -6,12 +8,16 @@
 }
 
 :root{
-    --backgroudColor: #94D794;
+    --backgroudColor: rgb(19, 83, 67);
     --btnColor: #36CC7C;
 
     --fontColor: #ffffff;
 
     --gray: #eeeeee;
+}
+
+.hidden{
+    display: none;
 }
 
 .example {
@@ -29,19 +35,30 @@
     background: linear-gradient(to bottom, white, black);
 }
 
-
-
-.passwordPage{
+.app{
     display: flex;
     align-items: center;
     width: 100%;
-    background: var(--backgroudColor);
     height: 100vh;
 }
 
-.forgot-form{
+body{
+    font-family: 'Gayathri', sans-serif;
+    background:var(--backgroudColor);
+}
+
+.login-form{
     height: 45%;
-    width: auto;
+    width: 25%;
+}
+
+.dividir{
+    color: var(--fontColor);
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+.login-form{
     margin: 1rem;
     background: transparent;
     display: -webkit-box;
@@ -60,16 +77,21 @@
     border-radius: 20px;
 }
 
-.page__title{
+.login__title{
     display: flex;
-    margin-bottom: 0.8rem;
     flex-wrap: wrap;
-    font-size: 1.2rem;
-    font-family: Roboto;
+    font-size: 1.5rem;
+    text-align: center;
     color: var(--fontColor);
 }
 
-.email__form{
+.login__text{
+    text-align: center;
+    margin-bottom: 0.75rem; 
+    color:var(--fontColor);
+}
+
+.login__form{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -80,18 +102,9 @@
             flex-direction: column;
 }
 
-.forgot-container{
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    margin-left: 5rem;
-    margin-top: 70%;
-}
-
-.email__input{
+.form__input{
     margin-bottom: 0.2rem;
     padding: 0.75rem 1rem;
-    width: 15rem;
     background: var(--gray);
     border: none;
     border-radius: 8px;
@@ -102,20 +115,30 @@
     margin-bottom: 0.7rem; 
 }
 
+.login__text--link{
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 0.3rem 0 0.5rem 0 ;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
 .container-btn{
-    display: block
+    display: block;
+    
 }
 
 .btn{
     display: block;
-    width: 3cm;
+    width: auto;
     opacity: 1;
     background: var(--btnColor);
     margin: 0 auto;
-    padding: 0.7rem 0.75rem;
-    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
     border-radius: 20px;
-    color: var(--fontColor);
+    color:var(--fontColor);
     border: none;
     font-weight: bold;
     -webkit-transition: 0.3s all;
@@ -123,19 +146,18 @@
     transition: 0.3s all;
 }
 
-.back__btn{
+.welcome__btn{
     display: block;
     width: auto;
     opacity: 1;
     margin-top: 2px;
     background: transparent;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.7rem;
     font-weight: bold;
     border-radius: 20px;
     border: none;
-    font-family: Roboto;
-    color:var(--fontColor);
+    color: var(--fontColor);
     font-weight: bold;
     -webkit-transition: 0.3s all;
     -o-transition: 0.3s all;
@@ -143,7 +165,7 @@
     text-decoration: none;
 }
 
-.back__btn:hover{
+.welcome__btn:hover{
     text-decoration: underline;
     opacity: 0.6;
 }
@@ -153,3 +175,7 @@
     cursor: pointer;
 }
 
+.login__text--link:hover{
+    text-decoration: underline;
+    opacity: 0.6;
+}

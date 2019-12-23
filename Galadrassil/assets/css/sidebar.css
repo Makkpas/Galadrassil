@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --backgroudColor: rgb(0, 156, 177);
+    --backgroudColorSecond: rgb(0, 177, 124);
+    --btnPlay: #36CC7C;
+    --btnReverse: #fff;
+
+    --fontColor: #fff;
+    
+}
+
+.background__sidebar{
+    position: absolute;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: var(--backgroudColor)
+
+}
+
+.background__sidebar--second{
+    position: absolute;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: var(--backgroudColorSecond)
+
+}
+
+
+.hidden{
+    display: none;
+}
+
+.nav{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    right: 0;
+}
+
+.button{
+    z-index: 1;
+    background:none;
+    border: none;
+}
+
+
+.nav__list{
+    height: 10rem;
+    width: 11rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25vh;
+    right: 0vw;
+    justify-content: space-around; 
+    list-style: none;
+}
+
+.list{
+    background:none;
+    border: none;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--fontColor);
+}
+
+
+#play{
+    color: var(--btnPlay)
+}
+
+#reverse{
+    color:var(--btnReverse)
+}

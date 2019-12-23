@@ -7,11 +7,12 @@
     <title>Recuperación de Contraseña</title>
 
     <?php require './inc/styles.php'?>
-    <link rel="stylesheet" href="./css/styleContraseña.css">
-
+    <link rel="stylesheet" href="./Assets/css/sidebar.css">
+    <link rel="stylesheet" href="./Assets/css/styleContraseña.css">
 </head>
 
 <body>
+<?php require './inc/sidebar.php'?>
     <div class="passwordPage">
         <div class="forgot-form">
             <div class="forgot-container">
@@ -33,6 +34,8 @@
         </div>
 
     </div>
+    <?php include './inc/scripts.php'?>
+    <script src="./Assets/js/app.js"></script>
 </body>
 
 </html>

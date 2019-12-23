@@ -1,79 +1,148 @@
-// const menuNormal = document.getElementById('icon-menu1');
-// const menuSide = document.getElementById('icon-menu2');
-const menuNormalJardin= document.getElementById('icon-menu-jardin1');
-const menuSideJardin = document.getElementById('icon-menu-jardin2');
-const tree = document.getElementById('tree');
-const care = document.getElementById('care');
 
-const backdrop = document.querySelector('.backdrop');
-const main = document.querySelector('.main');
-const sidebar =document.querySelector('.sidebar');
-const form =document.querySelector('.form');
-const stick =document.querySelectorAll('.stick');
-const cares = document.querySelectorAll('.care');
-
-
-
-// menuNormal.addEventListener('click', ()=>{
-//     sidebar.style.display = 'block'
-//     form.classList.add('blur');
-// });
-
-// menuSide.addEventListener('click', ()=>{
-//     sidebar.style.display = 'none'
-//     sidebar.style.trasition = '0.4s'
-//     form.classList.remove('blur');
-// });
-
-menuNormalJardin.addEventListener('click', ()=>{
-    sidebar.style.display = 'block'
-});
-
-menuSideJardin.addEventListener('click', ()=>{
-    sidebar.style.display = 'none'
-    sidebar.style.trasition = '0.4s'
-});
-
-tree.addEventListener('click', ()=>{
-    stick.forEach(stick=>{
-        stick.style.display = 'flex';
-    });
-    cares.forEach(care=>{
-        care.style.display = 'none';
-    });
-    backdrop.style.display = 'block';
-    sidebar.style.display = 'none'
-});
-
-care.addEventListener('click', ()=>{
-    cares.forEach(care=>{
-        care.style.display = 'flex';
-    });
-    stick.forEach(stick=>{
-        stick.style.display = 'none';
-    });
-    backdrop.style.display = 'block';
-    sidebar.style.display = 'none'
-});
-
-backdrop.addEventListener('click', ()=>{
-    stick.forEach(stick=>{
-        stick.style.display = 'none';
-    });
-    cares.forEach(care=>{
-        care.style.display = 'none';
+// Intro------------------------------
+var tl = gsap.timeline({
+        paused: true, 
     });
 
-    sidebar.style.display = 'none'
-    sidebar.style.trasition = '0.4s'
-    backdrop.style.display = 'none';
-});
+    tl.to(".background__sidebar",{
+        duration: .5,
+        xPercent : 100,
+        ease: "expo",
+    
+    });
+    tl.to(".background__sidebar--second",{
+        duration: .4,
+        xPercent : 100,
+        ease: "expo",
+    
+    },"-=.4");
+
+// Conclusion------------------------------
+
+ var ta = gsap.timeline({
+        paused: true, 
+        duration:.7
+    });
+
+    ta.fromTo(".nav__home",{
+        opacity: 0
+    },{
+        xPercent: -10,
+        ease: "expo",
+        opacity: 100
+    });
+
+    
+    ta.fromTo(".nav__signin",{
+        opacity: 0
+    },{
+        xPercent: -8,
+        ease: "expo",
+        opacity: 100
+
+    });
+
+    ta.fromTo(".nav__login",{
+        opacity: 0
+    },{
+        xPercent: -5,
+        ease: "expo",
+        opacity: 100
+
+    });
+
+// --------------------------
+
+   
+
+reverse= () =>{
+    // Reverse-----------------------
+    tl.reverse();
+    ta.reverse();
 
 
+    // Cambia clases------------------------
+    document.getElementById('play').className = "button";
+    document.getElementById('reverse').className = "button hidden";
+    document.getElementById('nav__list').className="nav__list hidden";
+    document.getElementById('b').className="background";
+
+    // Cambia tipos---------------------------
+    let user=document.getElementById('user');
+    let name=document.getElementById('name');
+    let email=document.getElementById('email');
+    let password=document.getElementById('password');
+    let password2=document.getElementById('password2');
+
+    if(!user==null){
+        user.type= "text";
+    }
+
+    if(!name==null){
+        name.type= "text";
+    }
+    
+    if(!email==null){
+        email.type= "text";
+    }
+    
+    if(!password==null){
+        password.type= "password";
+    }
+    
+    if(!password2==null){
+        password2.type= "password";
+    }
+    
+
+}
+
+play= () =>{
+    // Play------------------
+    tl.play();
+    ta.play();
+
+    // Cambia clases------------------------
+    document.getElementById('play').className = "button hidden";
+    document.getElementById('reverse').className = "button";
+    document.getElementById('nav__list').className="nav__list";
+    document.getElementById('b').className="background hidden";
 
 
+    // Cambia tipos---------------------------
+    let user=document.getElementById('user');
+    let name=document.getElementById('name');
+    let email=document.getElementById('email');
+    let password=document.getElementById('password');
+    let password2=document.getElementById('password2');
 
+    if(!user==null){
+        user.type= "hidden";
+    }
 
+    if(!name==null){
+        name.type= "hidden";
+    }
+    
+    // if(!email==null){
+        email.type= "hidden";
+    // }
+    
+    // if(!password==null){
+        password.type= "hidden";
+    // }
+    
+    if(!password2==null){
+        password2.type= "hidden";
+    }
+    
+}
+
+document.querySelector("#reverse").onclick = () =>
+   reverse();
+
+document.querySelector("#play").onclick = () =>
+    play();
 
 
 

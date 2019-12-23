@@ -11,25 +11,13 @@ session_start();
     <title>Registro</title>
 
     <?php require './inc/styles.php'?>
-    <link rel="stylesheet" href="./css/registro.css">
+    <link rel="stylesheet" href="./Assets/css/sidebar.css">
+    <link rel="stylesheet" href="./Assets/css/registro.css">
+
 </head>
 <body>
-    <div class="background">
-        <div  class="background__menu">
-                <a id="icon-menu1" class="button--menu" href="#">
-                    <svg class="iconify iconify--menu-normal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="50" height="50" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M20 5V2H0v3h20zm0 6V8H0v3h20zm0 6v-3H0v3h20z" fill="white"/></svg>
-                </a>
-        </div>
-        <div class="sidebar">
-            <div class="icon">
-                <a id="icon-menu2" class="button--menu" href="#">
-                    <svg class="iconify iconify--menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="50" height="50" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M20 5V2H0v3h20zm0 6V8H0v3h20zm0 6v-3H0v3h20z" fill="white"/></svg>
-                </a>
-            </div>
-            <ul class="list">
-                <li class="sidebar__list"><a class="sidebar__login" href="inicioSesion.html">Inicio Sesión</a></li>
-            </ul>
-        </div>
+    <?php require './inc/sidebar.php'?>
+    <section id="b" class="app">
             <div class="form">
                     <div class="form__register">
                             <H2 class="register__tittle">Registro</H2>
@@ -59,10 +47,8 @@ session_start();
 
                     </div>
             </div>
-    </div>
-    
-    
-    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
-    <script src="./assets/js/app.js"></script>
+    </section>
+    <?php include './inc/scripts.php'?>
+    <script src="./Assets/js/app.js"></script>
 </body>
 </html>
