@@ -12,6 +12,12 @@
 </head>
 
 <body>
+<script>
+    var index=false;
+    var pass=true;
+    var sign=false;
+    var home=false;
+    </script>
 <?php require './inc/sidebar.php'?>
     <div class="passwordPage">
         <div class="forgot-form">

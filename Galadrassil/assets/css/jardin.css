@@ -5,23 +5,54 @@
 }
 
 :root{
-    --backgroudColor: #94D794;
+    --backgroudColor: rgb(0, 110, 92);
+    --backgroudColorSecond: rgb(0, 177, 124);
 
-    --btnColor: #36CC7C;
-    --iconfy: #36CC7C;
-
-    --fontColor: #ffffff;
+    --fontColor: #fff;
+    
 
     --gray: #eeeeee;
 }
 
+.garden{
+    display: grid;
+    grid-template-columns: 1fr repeat(5, 15vw) 1fr;
+    grid-template-rows: 1fr repeat(2, 22vh) 1fr;
+    grid-gap: .5rem;
+    grid-template-areas: 
+    'top top top top top top top'
+    'margin1 tree tree tree tree tree margin2'
+    'margin3 tree tree tree tree tree margin4'
+    'foot foot foot foot foot foot foot '
+    ;
+
+
+    background: var(--backgroudColor);
+    width: 80vw;
+    height: 60vh;
+
+    position: absolute;
+    top: 50%;
+    left: 10%;
+
+    transform: translateY(-50%);
+
+    border-radius: 2rem;
+
+    
+}
+
+.tree{
+    grid-area: tree;
+    background: var(--backgroudColorSecond);
+}
 
 .header{
     position: relative;
     width: 100%;
     height: 10vh;
 
-    background: var(--backgroudColor);
+    /* background: var(--backgroudColor); */
     
     display: flex;
     flex-direction: row;
@@ -44,7 +75,7 @@
 
 .header__tittle{
     position: absolute;
-    left: 20%;
+    left: 0;
 
 
     font-family: Roboto;
@@ -54,7 +85,7 @@
     line-height: 75px;
     /* identical to box height */
 
-    color:var(--fontColor);
+    color:var(--backgroudColor);
 }
 
 .header__avatar{
@@ -70,13 +101,7 @@
 }
 
 
-.sidebar, .menu__sidebar{
-    display: none;
-}
-
-
 .menu__sidebar{
-
     display: flex;
     align-items: center;
 }
@@ -238,7 +263,7 @@
 
     position: relative;
     
-    background: var(--btnColor);
+    background: var(--backgroudColorSecond);
 }
 
 .icons{

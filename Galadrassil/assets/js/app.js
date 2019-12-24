@@ -18,13 +18,12 @@ var tl = gsap.timeline({
     },"-=.4");
 
 // Conclusion------------------------------
-
- var ta = gsap.timeline({
+var ta = gsap.timeline({
         paused: true, 
         duration:.7
     });
 
-    ta.fromTo(".nav__home",{
+    ta.fromTo(".list",{
         opacity: 0
     },{
         xPercent: -10,
@@ -32,7 +31,6 @@ var tl = gsap.timeline({
         opacity: 100
     });
 
-    
     ta.fromTo(".nav__signin",{
         opacity: 0
     },{
@@ -53,7 +51,62 @@ var tl = gsap.timeline({
 
 // --------------------------
 
-   
+function verificaciónPaginaMostrar(){
+    if (index){
+        email.type= "text";
+        password.type= "password"; 
+        document.getElementById('score').className="list nav_score hidden";
+        document.getElementById('profile').className="list nav_profile hidden";      
+    }
+
+    if(pass){
+        email.type= "text";
+        document.getElementById('score').className="list nav_score hidden";
+        document.getElementById('profile').className="list nav_profile hidden";
+    }
+
+    if(sign){
+        user.type= "text";
+        name.type= "text";
+        email.type= "text";
+        password.type= "password";
+        password2.type= "password";
+        document.getElementById('app').className="app";
+        document.getElementById('score').className="list nav_score hidden";
+        document.getElementById('profile').className="list nav_profile hidden";
+    }
+
+    if(home){
+        document.getElementById('score').className="list nav_score";
+        document.getElementById('profile').className="list nav_profile";
+    }
+
+}
+function verificaciónPaginaOcultar(){
+    if (index){
+        email.type= "hidden";
+        password.type= "hidden";       
+    }
+
+    if(pass){
+        email.type= "hidden";
+    }
+
+    if(sign){
+        user.type= "hidden";
+        name.type= "hidden";
+        email.type= "hidden";
+        password.type= "hidden";
+        password2.type= "hidden";
+        document.getElementById('app').className="app hidden";
+    }
+
+    if(home){
+        document.getElementById('score').className="list nav_score";
+        document.getElementById('profile').className="list nav_profile";
+    }
+
+}
 
 reverse= () =>{
     // Reverse-----------------------
@@ -65,7 +118,6 @@ reverse= () =>{
     document.getElementById('play').className = "button";
     document.getElementById('reverse').className = "button hidden";
     document.getElementById('nav__list').className="nav__list hidden";
-    document.getElementById('b').className="background";
 
     // Cambia tipos---------------------------
     let user=document.getElementById('user');
@@ -74,28 +126,11 @@ reverse= () =>{
     let password=document.getElementById('password');
     let password2=document.getElementById('password2');
 
-    if(!user==null){
-        user.type= "text";
-    }
-
-    if(!name==null){
-        name.type= "text";
-    }
-    
-    if(!email==null){
-        email.type= "text";
-    }
-    
-    if(!password==null){
-        password.type= "password";
-    }
-    
-    if(!password2==null){
-        password2.type= "password";
-    }
-    
+    verificaciónPaginaMostrar();
 
 }
+
+
 
 play= () =>{
     // Play------------------
@@ -106,8 +141,6 @@ play= () =>{
     document.getElementById('play').className = "button hidden";
     document.getElementById('reverse').className = "button";
     document.getElementById('nav__list').className="nav__list";
-    document.getElementById('b').className="background hidden";
-
 
     // Cambia tipos---------------------------
     let user=document.getElementById('user');
@@ -116,26 +149,8 @@ play= () =>{
     let password=document.getElementById('password');
     let password2=document.getElementById('password2');
 
-    if(!user==null){
-        user.type= "hidden";
-    }
-
-    if(!name==null){
-        name.type= "hidden";
-    }
-    
-    // if(!email==null){
-        email.type= "hidden";
-    // }
-    
-    // if(!password==null){
-        password.type= "hidden";
-    // }
-    
-    if(!password2==null){
-        password2.type= "hidden";
-    }
-    
+    verificaciónPaginaOcultar();
+  
 }
 
 document.querySelector("#reverse").onclick = () =>

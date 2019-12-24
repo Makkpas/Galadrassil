@@ -40,64 +40,6 @@ body{
 
 }
 
-.form__register{
-    grid-area: register;
-    display: flex;
-    flex-direction: column;
-}
-
-.register__tittle{
-    margin-bottom: 1rem;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 28px;
-
-    color: #FFFFFF;
-}
-
-.input__form{
-    margin: .3rem 0rem;
-    padding: .8rem 3rem .8rem 1rem;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    color: black;
-
-
-    border-radius: 4px;
-    border: none;
-    background: var(--gray);
-}
-
-.register__buttom{
-    padding: .4rem 3rem;
-    margin-top: 1rem;
-
-
-    background: var(--btnColor);
-    border: none;
-    border-radius: 33px; 
-
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-
-    color:var(--fontColor);
-}
-
-
-.form__login{
-    position: relative;
-}
-
 .login{
 
     margin-top: 1rem;
@@ -120,4 +62,66 @@ body{
 
     color: #FFFFFF;
 }
+
+.form__login{
+    position: relative;
+}
+
+.form__register{
+    grid-area: register;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden{
+    display: none;
+}
+
+.input__form{
+    margin: .3rem 0rem;
+    padding: .8rem 3rem .8rem 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: black;
+
+
+    border-radius: 4px;
+    border: none;
+    background: var(--gray);
+}
+.register__tittle{
+    margin-bottom: 1rem;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+
+.register__buttom{
+    padding: .4rem 3rem;
+    margin-top: 1rem;
+
+
+    background: var(--btnColor);
+    border: none;
+    border-radius: 33px; 
+
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    color:var(--fontColor);
+}
+
+
 

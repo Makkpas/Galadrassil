@@ -10,6 +10,8 @@
             <li><button id="home" class="list nav__home">Jardín</button></li>
             <li><button id="signin" class="list nav__signin">Registro</button></li>
             <li><button id="login" class="list nav__login">Iniciar Sesion</button></li>
+            <li><button id="score" class="list nav__score hidden">Puntajes</button></li>
+            <li><button id="profile" class="list nav__profile hidden">Perfil</button></li>
         </ul>
         
     </section>

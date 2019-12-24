@@ -22,8 +22,8 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="./Assets/css/styleInicioSesion.css">
 
 </head>
-
 <body>
+    
     <?php require './inc/sidebar.php'?>
     <div class="app">
         <div id='login-form' class="login-form">
@@ -58,6 +58,12 @@ if (isset($_SESSION['user'])) {
 
     </div>
     <?php include './inc/scripts.php'?>
+    <script>
+        var index=true;
+        var pass=false;
+        var sign=false;
+        var home=false;
+    </script>
     <script src="./Assets/js/app.js"></script>
 </body>
 

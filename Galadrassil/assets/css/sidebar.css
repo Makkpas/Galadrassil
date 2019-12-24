@@ -5,7 +5,7 @@
 }
 
 :root{
-    --backgroudColor: rgb(0, 156, 177);
+    --backgroudColor: rgb(0, 110, 92);
     --backgroudColorSecond: rgb(0, 177, 124);
     --btnPlay: #36CC7C;
     --btnReverse: #fff;
@@ -19,7 +19,8 @@
     left: -100vw;
     width: 100vw;
     height: 100vh;
-    background: var(--backgroudColor)
+    background: var(--backgroudColor);
+    z-index: 1;
 
 }
 
@@ -28,7 +29,8 @@
     left: -100vw;
     width: 100vw;
     height: 100vh;
-    background: var(--backgroudColorSecond)
+    background: var(--backgroudColorSecond);
+    z-index: 1;
 
 }
 
@@ -42,6 +44,7 @@
     display: flex;
     flex-direction: row;
     right: 0;
+    z-index: 2;
 }
 
 .button{

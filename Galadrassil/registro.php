@@ -16,10 +16,11 @@ session_start();
 
 </head>
 <body>
+   
     <?php require './inc/sidebar.php'?>
-    <section id="b" class="app">
+    <section id="app" class="app">
             <div class="form">
-                    <div class="form__register">
+                    <div id="form__register" class="form__register">
                             <H2 class="register__tittle">Registro</H2>
                             <form action="signin.php" method="POST" class="register__form" autocomplete="on">
                                 <input class="input__form form__user" type="text" id="user" name="usuario" placeholder="Usuario">
@@ -49,6 +50,12 @@ session_start();
             </div>
     </section>
     <?php include './inc/scripts.php'?>
+    <script>
+        var index=false;
+        var pass=false;
+        var sign=true;
+        var home=false;
+    </script>
     <script src="./Assets/js/app.js"></script>
 </body>
 </html>
