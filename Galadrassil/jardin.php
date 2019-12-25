@@ -8,6 +8,8 @@
 
     <?php require './inc/styles.php'?>
     <link rel="stylesheet" href="./Assets/css/sidebar.css">
+    <link rel="stylesheet" href="./Assets/css/modal.css">
+    <link rel="stylesheet" href="./Assets/css/jardinBase.css">
     <link rel="stylesheet" href="./Assets/css/jardin.css">
 </head>
 <body>
@@ -17,6 +19,8 @@
 
     
     <main class="main">
+    <?php include './inc/jardinbase.php'?>
+    <?php include './inc/modal.php' ?>
         <!-- <div class="backdrop" id="cuerpo"></div>
         <div class="main__sticks">
             <span class="stick stick--guanacaste">     
@@ -50,13 +54,7 @@
                 <span class="tag__care tag--fertilizer"></span>
             </span>
         </div> -->
-        <div class="garden">
-            <div class="tree"></div>
-            <div class="tree"></div>
-            <div class="tree"></div>
-            <div class="tree"></div>
-            <div class="tree"></div>
-        </div>
+       
 
     </main>
 

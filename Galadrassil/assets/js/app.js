@@ -1,5 +1,5 @@
 
-// Intro------------------------------
+// Intro sidebar------------------------------
 var tl = gsap.timeline({
         paused: true, 
     });
@@ -17,7 +17,7 @@ var tl = gsap.timeline({
     
     },"-=.4");
 
-// Conclusion------------------------------
+// Conclusion sidebar------------------------------
 var ta = gsap.timeline({
         paused: true, 
         duration:.7
@@ -31,25 +31,23 @@ var ta = gsap.timeline({
         opacity: 100
     });
 
-    ta.fromTo(".nav__signin",{
-        opacity: 0
-    },{
-        xPercent: -8,
-        ease: "expo",
-        opacity: 100
-
-    });
-
-    ta.fromTo(".nav__login",{
-        opacity: 0
-    },{
-        xPercent: -5,
-        ease: "expo",
-        opacity: 100
-
-    });
-
 // --------------------------
+
+// Intro modal----------------------------------
+var mo = gsap.timeline({
+    paused: true,
+    duration:.5
+});
+
+mo.fromTo(".modal",{
+    opacity:0,
+    y:-200
+},{
+    y:0,
+    opacity:100,
+    ease: "expo"
+});
+
 
 function verificaciónPaginaMostrar(){
     if (index){
@@ -131,6 +129,10 @@ reverse= () =>{
 }
 
 
+playModal = () =>{
+    // Play------------------
+    mo.play();
+}
 
 play= () =>{
     // Play------------------
@@ -159,5 +161,7 @@ document.querySelector("#reverse").onclick = () =>
 document.querySelector("#play").onclick = () =>
     play();
 
+document.querySelectorAll("#tree").onclick = () =>
+    playModal();
 
 

@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --backgroudColor: rgb(0, 110, 92);
+    --backgroudColorSecond: rgb(0, 177, 124);
+
+    --fontColor: #fff;
+    --care: #fff;
+
+    --gray: #eeeeee;
+}
+
+.blur{
+    filter: blur(6px);
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+
+    transform: translateY(-50%);
+    width: 50vw;
+    background: var(--backgroudColorSecond);
+    border-radius: 2rem;
+}
+
+.tittle{
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 700;
+    color: var(--fontColor);
+
+}
+
+.buttom{
+    text-align: center;
+}
+.buttom__care{
+    margin: 1rem auto;
+    background:none;
+    border: none;
+    color: var(--care);
+}
