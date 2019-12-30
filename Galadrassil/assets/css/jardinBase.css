@@ -14,35 +14,50 @@
     --gray: #eeeeee;
 }
 
-.garden{
-    display: grid;
-    grid-template-columns: 1fr repeat(5, 15vw) 1fr;
-    grid-template-rows: 1fr repeat(2, 22vh) 1fr;
-    grid-gap: .5rem;
-    grid-template-areas: 
-    'top top top top top top top'
-    'margin1 tree tree tree tree tree margin2'
-    'margin3 tree tree tree tree tree margin4'
-    'foot foot foot foot foot foot foot '
-    ;
+.button__tree{
+    background: white;
+    border: white;
+    border-radius: 1rem;
+}
 
+.garden{
 
     background: var(--backgroudColor);
-    width: 80vw;
+    width: 60vw;
     height: 60vh;
 
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 10vh;
+    left: 50%;
 
-    transform: translateY(-50%);
+    transform: translateX(-50%);
 
     border-radius: 2rem;
 
-    
+    display: flex;
 }
 
-.tree{
-    grid-area: tree;
-    background: var(--backgroudColorSecond);
+.garden__button{
+    display: flex;
+    width: 46vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-48%);
+    height: 40vh;
+    align-content: space-evenly;
+}
+
+
+.garden__tittle{
+    height: 10vh;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 7vh;
+    color: white;
+    text-align: center;
+    width: 60vw;
+    position: absolute;
 }

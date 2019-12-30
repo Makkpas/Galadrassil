@@ -33,21 +33,16 @@ var ta = gsap.timeline({
 
 // --------------------------
 
-// Intro modal----------------------------------
-var mo = gsap.timeline({
-    paused: true,
-    duration:.5
-});
-
-mo.fromTo(".modal",{
-    opacity:0,
-    y:-200
-},{
-    y:0,
-    opacity:100,
-    ease: "expo"
-});
-
+// Intro modal---------------------------------
+    var mo = gsap.timeline({
+        paused: true,
+        duration: .5
+    });
+    
+    mo.to(".modal",{
+        yPercent: 150,
+        ease: "expo"
+    })
 
 function verificaciónPaginaMostrar(){
     if (index){
@@ -129,9 +124,22 @@ reverse= () =>{
 }
 
 
-playModal = () =>{
+reverseModal = () =>{
+    // var buttonTree = document.querySelectorAll("#button__tree");
+
     // Play------------------
-    mo.play();
+    mo.reverse(); 
+    
+    
+    document.getElementById('b').className = "b";
+}
+playModal = () =>{
+    // var buttonTree = document.querySelectorAll("#button__tree");
+
+    // Play------------------
+    mo.play(); 
+    
+    document.getElementById('b').className = "b blur";
 }
 
 play= () =>{
@@ -155,13 +163,61 @@ play= () =>{
   
 }
 
+function verificarHomeBotones(){
+    var buttonTree = document.querySelectorAll('#button__tree');
+    buttonTree.forEach(element => {
+        element.addEventListener('click', playModal());
+    });
+}
+
+function initCompometsHome(){
+    document.querySelector("#button__tree").onclick = () =>
+    verificarHomeBotones();
+
+    document.querySelector("#modal__close").onclick = () =>
+    reverseModal();
+
+}
+function init() {
+    if(home){
+        verificarHomeBotones();
+        initCompometsHome();
+    }
+}
+
+function redirectWindowSign(){
+    window.location = "registro.php";
+}
+function redirectWindowHome(){
+    window.location = "jardin.php";
+}
+function redirectWindowLogin(){
+    window.location = "inicioSesion.php";
+}
+function redirectWindowProfile(){
+    window.location = "perfil.php";
+}
+function redirectWindowScore(){
+    window.location = "topPuntajes.php";
+}
+
 document.querySelector("#reverse").onclick = () =>
    reverse();
 
 document.querySelector("#play").onclick = () =>
     play();
 
-document.querySelectorAll("#tree").onclick = () =>
-    playModal();
+document.querySelector("#signin").onclick = () =>
+    redirectWindowSign();
 
+document.querySelector("#home").onclick = () =>
+    redirectWindowHome();
 
+document.querySelector("#login").onclick = () =>
+    redirectWindowLogin();
+
+document.querySelector("#score").onclick = () =>
+    redirectWindowScore();
+
+document.querySelector("#profile").onclick = () =>
+    redirectWindowProfile();

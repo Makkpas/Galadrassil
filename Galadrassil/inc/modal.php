@@ -1,17 +1,21 @@
-
-    <div class="modal hidden">
-        <div class="modal__tittle">
-            <H2 class="tittle">Arbol</H2>
+<div class="modal">
+            <div class="modal1">
+                <div class="modal__left">
+                <div class="tree">
+                    <img src="" alt="">
+                </div>  
+                </div>
+                <div class="modal__rigth">
+                    <div class="modal__selector">
+                        <button class="selector__button">Pochote</button>
+                        <button class="selector__button">Guanacaste</button>
+                        <button class="selector__button">Malinche</button>
+                        <button class="selector__button">Amarillo</button>
+                        <button class="selector__button">Rojo</button>
+                    </div>
+                </div>
+                <div id="modal__close" class="modal__close">
+                    <button class="button__close" ><span class="iconify" data-icon="bx:bxs-x-circle" data-inline="false" style="color: #ffffff;" data-width="60" data-height="60"></span></button>
+                </div>
         </div>
-        <div class="modal__tree">
-            <img class="tree--img" src="" alt="">
         </div>
-        <div class="buttom">
-            <button class="buttom__care">
-                <span id="water" class="iconify supply" data-icon="jam:water-drop-f" data-inline="false" data-width="50" data-height="50"></span>
-            </button>
-            <button class="buttom__care">
-                <span id="fertilizer" class="iconify supply" data-icon="mdi:sack" data-inline="false" data-width="50" data-height="50"></span>
-            </button>
-        </div>
-    </div> 

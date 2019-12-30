@@ -14,6 +14,11 @@
     --gray: #eeeeee;
 }
 
+.blur{
+    filter: blur(6px);
+    background: rgba(0, 0, 0, 0.459);
+}
+
 .header{
     position: relative;
     width: 100%;
