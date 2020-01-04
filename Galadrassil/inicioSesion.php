@@ -63,6 +63,8 @@ if (isset($_SESSION['user'])) {
         var pass=false;
         var sign=false;
         var home=false;
+        var profile=false;
+        var score=false;
     </script>
     <script src="./Assets/js/app.js"></script>
 </body>

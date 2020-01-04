@@ -50,12 +50,17 @@ function verificaciónPaginaMostrar(){
         password.type= "password"; 
         document.getElementById('score').className="list nav_score hidden";
         document.getElementById('profile').className="list nav_profile hidden";      
+        document.getElementById('close').className="list nav_close hidden";
+        document.getElementById('home').className="list nav_home hidden";
     }
 
     if(pass){
         email.type= "text";
         document.getElementById('score').className="list nav_score hidden";
         document.getElementById('profile').className="list nav_profile hidden";
+        document.getElementById('close').className="list nav_close hidden";
+        document.getElementById('home').className="list nav_home hidden";
+
     }
 
     if(sign){
@@ -67,11 +72,16 @@ function verificaciónPaginaMostrar(){
         document.getElementById('app').className="app";
         document.getElementById('score').className="list nav_score hidden";
         document.getElementById('profile').className="list nav_profile hidden";
+        document.getElementById('close').className="list nav_close hidden";
+        document.getElementById('home').className="list nav_home hidden";
+
     }
 
-    if(home){
+    if(home || profile || score){
+        document.getElementById('home').className="list nav_home";
         document.getElementById('score').className="list nav_score";
         document.getElementById('profile').className="list nav_profile";
+        document.getElementById('close').className="list nav_close";
     }
 
 }
@@ -94,9 +104,12 @@ function verificaciónPaginaOcultar(){
         document.getElementById('app').className="app hidden";
     }
 
-    if(home){
+    if(home || profile || score){
+        document.getElementById('signin').className="list nav_score hidden";
+        document.getElementById('login').className="list nav_profile hidden";
         document.getElementById('score').className="list nav_score";
         document.getElementById('profile').className="list nav_profile";
+        document.getElementById('close').className="list nav_close";
     }
 
 }
@@ -181,6 +194,7 @@ function initCompometsHome(){
             if(i == 0){
                 // treeImg.innerHTML = '<img class="tree__img"src="../img/t_0" alt="">';
                 console.log("Planto arbol 0");
+                
             }
             if(i == 1){
                 // treeImg.innerHTML = '<img class="tree__img"src="../img/t_1" alt="">';
@@ -229,6 +243,9 @@ function redirectWindowProfile(){
 function redirectWindowScore(){
     window.location = "topPuntajes.php";
 }
+function redirectWindowClose(){
+    window.location = "inicioSesion.php";
+}
 
 
 document.querySelector("#reverse").onclick = () =>
@@ -251,3 +268,6 @@ document.querySelector("#score").onclick = () =>
 
 document.querySelector("#profile").onclick = () =>
     redirectWindowProfile();
+
+document.querySelector("#close").onclick = () =>
+    redirectWindowClose();

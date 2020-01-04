@@ -55,6 +55,8 @@ session_start();
         var pass=false;
         var sign=true;
         var home=false;
+        var profile=false;
+        var score=false;
     </script>
     <script src="./Assets/js/app.js"></script>
 </body>

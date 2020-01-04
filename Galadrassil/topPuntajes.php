@@ -6,26 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Perfil</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/topPuntajes.css">
+    <?php require './inc/styles.php'?>
+    <link rel="stylesheet" href="./Assets/css/sidebar.css">
+    <link rel="stylesheet" href="./Assets/css/topPuntajes.css">
 </head>
 <body>
-    <div class="pagina">
-        <header class="header">
-            <div class="header__avatar">
-                <img class="avatar__img" src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=BlazerShirt&eyeType=Wink&eyebrowType=Angry&mouthType=Smile&skinColor=Light'/>
-            </div>
-            <div class="header__tittle">
-                <H1>Top 10</H1>
-            </div>
-            <div class="header__menu">
-                <button class="menu__button">Menu</button>
-            </div>
-        </header>
-    </div>
+    <?php include './inc/sidebar.php' ?>
+    <?php include './inc/header.php' ?>
+        
 
     <main class="main">
-        
+        <div class="header__tittle">
+            <H2>Top 10</H2>
+        </div>
         <div class="backdrop"></div>
 
         <div class="modal">
@@ -174,15 +167,23 @@
 
     <footer class="footer">
         <div class="icons">
-            <span class="iconify" data-icon="ant-design:facebook-fill" data-inline="false" data-width="50" data-height="50"></span>
-            <span class="iconify" data-icon="feather:instagram" data-inline="false" data-width="50" data-height="50"></span>
-            <span class="iconify" data-icon="ant-design:twitter-outline" data-inline="false" data-width="50" data-height="50"></span>
-            <span class="iconify" data-icon="ant-design:google-plus-outline" data-inline="false" data-width="50" data-height="50"></span>
+            <span class="iconify iconify--color" data-icon="ant-design:facebook-fill" data-inline="false" data-width="50" data-height="50"></span>
+            <span class="iconify iconify--color" data-icon="feather:instagram" data-inline="false" data-width="50" data-height="50"></span>
+            <span class="iconify iconify--color" data-icon="ant-design:twitter-outline" data-inline="false" data-width="50" data-height="50"></span>
+            <span class="iconify iconify--color" data-icon="ant-design:google-plus-outline" data-inline="false" data-width="50" data-height="50"></span>
 
         </div>
     </footer>
-</div>
-    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
-    <script src="./js/puntajes.js"></script>
+    </div>
+    <?php include './inc/scripts.php'?>
+    <script>
+        var index=false;
+        var pass=false;
+        var sign=false;
+        var home=false;
+        var profile=false;
+        var score=true;
+        </script>
+    <script src="./Assets/js/app.js"></script>
 </body>
 </html>

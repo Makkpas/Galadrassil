@@ -15,12 +15,7 @@ session_start();?>
 </head>
 
 <body>
-<script>
-    var index=false;
-    var pass=true;
-    var sign=false;
-    var home=false;
-    </script>
+
 <?php require './inc/sidebar.php'?>
     <div class="passwordPage">
         <div class="forgot-form">
@@ -52,6 +47,14 @@ session_start();?>
 
     </div>
     <?php include './inc/scripts.php'?>
+    <script>
+        var index=false;
+        var pass=true;
+        var sign=false;
+        var home=false;
+        var profile=false;
+        var score=false;
+    </script>
     <script src="./Assets/js/app.js"></script>
 </body>
 

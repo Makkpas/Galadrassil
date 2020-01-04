@@ -5,7 +5,13 @@
 }
 
 .root{
-    --header: #629044;
+    --backgroudColor: rgb(0, 110, 92);
+    --backgroudColorSecond: rgb(0, 177, 124);
+
+    --fontColor: #fff;
+    
+
+    --gray: #eeeeee;
 }
 
 .header{
@@ -13,7 +19,6 @@
     width: 100%;
     height: 10vh;
 
-    background: #629044;
     
     display: flex;
     flex-direction: row;
@@ -32,7 +37,7 @@
 
 .header__tittle{
     position: absolute;
-    left: 20%;
+    left: 0;
 
 
     font-family: Roboto;
@@ -42,7 +47,7 @@
     line-height: 75px;
     /* identical to box height */
 
-    color: #201B1D;
+    color:var(--backgroudColor);
 }
 
 .header__avatar{
@@ -122,7 +127,7 @@
 
     position: relative;
     
-    background: #1E1D1E;
+    background: var(--backgroudColorSecond);
 }
 
 .icons{
@@ -136,6 +141,6 @@
     transform: translateY(-50%);
 }
 
-.iconify{
-    color: #629044;
+.iconify--color{
+    color: var(--fontColor);
 }
