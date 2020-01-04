@@ -179,19 +179,24 @@ function initCompometsHome(){
             console.log(i);
 
             if(i == 0){
-                treeImg.innerHTML = '<img class="tree__img"src="../img/t_0" alt="">';
+                // treeImg.innerHTML = '<img class="tree__img"src="../img/t_0" alt="">';
+                console.log("Planto arbol 0");
             }
             if(i == 1){
-                treeImg.innerHTML = '<img class="tree__img"src="../img/t_1" alt="">';
+                // treeImg.innerHTML = '<img class="tree__img"src="../img/t_1" alt="">';
+                console.log("Planto arbol 1");
             }
             if(i == 2){
-                treeImg.innerHTML = '<img class="tree__img"src="../img/t_2" alt="">';
+                // treeImg.innerHTML = '<img class="tree__img"src="../img/t_2" alt="">';
+                console.log("Planto arbol 2");
             }
             if(i == 3){
-                treeImg.innerHTML = '<img class="tree__img"src="../img/t_3" alt="">';
+                // treeImg.innerHTML = '<img class="tree__img"src="../img/t_3" alt="">';
+                console.log("Planto arbol 3");
             }
             if(i == 4){
-                treeImg.innerHTML = '<img class="tree__img"src="../img/t_4" alt="">';
+                // treeImg.innerHTML = '<img class="tree__img"src="../img/t_4" alt="">';
+                console.log("Planto arbol 4");
             }
         }
     }
