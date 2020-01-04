@@ -134,9 +134,6 @@ reverseModal = () =>{
     document.getElementById('b').className = "b";
 }
 playModal = () =>{
-    // var buttonTree = document.querySelectorAll("#button__tree");
-
-    // Play------------------
     mo.play(); 
     
     document.getElementById('b').className = "b blur";
@@ -163,27 +160,54 @@ play= () =>{
   
 }
 
-function verificarHomeBotones(){
-    var buttonTree = document.querySelectorAll('#button__tree');
-    buttonTree.forEach(element => {
-        element.addEventListener('click', playModal());
-    });
-}
-
 function initCompometsHome(){
-    document.querySelector("#button__tree").onclick = () =>
-    verificarHomeBotones();
+    let buttonsTree = document.getElementsByClassName('button__tree');
+    let buttonClose = document.getElementById('modal__close');
+    let selectorButtonTree = document.getElementsByClassName('selector__button');
 
-    document.querySelector("#modal__close").onclick = () =>
-    reverseModal();
+    for(var i=0; i<buttonsTree.length; i++){
+        buttonsTree[i].onclick = function (){
+            playModal();
+        }
+    }
+    for(let i=0; i<selectorButtonTree.length; i++){
+        selectorButtonTree[i].onclick = function (){
+            // let id = selectorButtonTree[i].classList.contains(i);
+            let treeImg = document.getElementsByClassName('tree__img');
+
+            // treeImg.innerHTML = 'src="../img/"'+i+'""';
+            console.log(i);
+
+            if(i == 0){
+                treeImg.innerHTML = '<img class="tree__img"src="../img/t_0" alt="">';
+            }
+            if(i == 1){
+                treeImg.innerHTML = '<img class="tree__img"src="../img/t_1" alt="">';
+            }
+            if(i == 2){
+                treeImg.innerHTML = '<img class="tree__img"src="../img/t_2" alt="">';
+            }
+            if(i == 3){
+                treeImg.innerHTML = '<img class="tree__img"src="../img/t_3" alt="">';
+            }
+            if(i == 4){
+                treeImg.innerHTML = '<img class="tree__img"src="../img/t_4" alt="">';
+            }
+        }
+    }
+    buttonClose.onclick = function(){
+        reverseModal();
+    }
 
 }
 function init() {
     if(home){
-        verificarHomeBotones();
         initCompometsHome();
+        
     }
 }
+
+init();
 
 function redirectWindowSign(){
     window.location = "registro.php";
@@ -200,6 +224,7 @@ function redirectWindowProfile(){
 function redirectWindowScore(){
     window.location = "topPuntajes.php";
 }
+
 
 document.querySelector("#reverse").onclick = () =>
    reverse();

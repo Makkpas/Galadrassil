@@ -2,16 +2,16 @@
             <div class="modal1">
                 <div class="modal__left">
                 <div class="tree">
-                    <img src="" alt="">
+                    <img class="tree__img"src="" alt="">
                 </div>  
                 </div>
                 <div class="modal__rigth">
                     <div class="modal__selector">
-                        <button class="selector__button">Pochote</button>
-                        <button class="selector__button">Guanacaste</button>
-                        <button class="selector__button">Malinche</button>
-                        <button class="selector__button">Amarillo</button>
-                        <button class="selector__button">Rojo</button>
+                        <button class="selector__button 0">Pochote</button>
+                        <button class="selector__button 1">Guanacaste</button>
+                        <button class="selector__button 2">Malinche</button>
+                        <button class="selector__button 3">Amarillo</button>
+                        <button class="selector__button 4">Rojo</button>
                     </div>
                 </div>
                 <div id="modal__close" class="modal__close">
