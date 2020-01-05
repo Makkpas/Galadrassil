@@ -1,5 +1,6 @@
 <?php
-session_start();?>
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,7 @@ session_start();?>
 
                 <h2 class="page__title">¿Olvidó su contraseña?</h2>
 
-                <form action="recContrasenia.php" method="POST" class="email__form " autocomplete="on">
+                <form action="recContraConf.php" method="POST" class="email__form " autocomplete="on">
                     <input class="input__form form__password" type="password" id="password" name="password" placeholder="Contraseña">
                     <input class="input__form form__password2" type="password" id="password2" name="password2" placeholder="Confirme Contraseña">
                     

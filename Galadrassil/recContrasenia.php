@@ -22,12 +22,10 @@ require './database.php';
 $cod = random_int(000000, 999999);
 
 $email = $_POST['email'];
-//$password = $_POST['password'];
-//$password2 = $_POST['password2'];
-//$codigo_confirmacion = $_POST[$cod];
+$id_usuario = $_POST['id_usuario'];
 
 $existeEmail = $database->select('usuarios', ['usuario','email', 'password', 'name', 'id'], [
-	'email' => $email
+    'email' => $email
 ]);
 
 /*$existeCod = $database->select('recuperacion_passwordd', ['codigo_confirmacion'], [
@@ -36,29 +34,30 @@ $existeEmail = $database->select('usuarios', ['usuario','email', 'password', 'na
 
 
 if (count($existeEmail) > 0) {
-    $database->insert('recuperacion_passwordd', [
-        'codigo_confirmacion' => $cod
+    $database->insert('recuperacion_password', [
+        'codigo_confirmacion' => $cod,
+        'id_usuario' => $existeEmail[0]['id']
     ]);   
 
     $mail = new PHPMailer(true);
 
         try {
-            //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-            $mail->isSMTP();                                            // Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-            $mail->Username   = 'lilmakk2@gmail.com';                     // SMTP username
-            $mail->Password   = 'galadrassil';                               // SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-            $mail->Port       = 587;                                    // TCP port to connect to
+            //Configuración del servidor
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
+            $mail->isSMTP();                                            
+            $mail->Host       = 'smtp.gmail.com';                    
+            $mail->SMTPAuth   = true;                                   
+            $mail->Username   = 'lilmakk2@gmail.com';                     
+            $mail->Password   = 'galadrassil';                               
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;        
+            $mail->Port       = 587;                                    
 
-            //Recipients
+            //Usuario que envia el correo
             $mail->setFrom('lilmakk2@gmail.com', 'lilmakk');
-            $mail->addAddress($email);     // Add a recipient
+            $mail->addAddress($email);     
 
-            // Content
-            $mail->isHTML(true);                                  // Set email format to HTML
+            // contenido
+            $mail->isHTML(true);                                  
             $mail->Subject = 'Codigo Confirmacion';
             $mail->Body    = $cod;
 
@@ -68,9 +67,11 @@ if (count($existeEmail) > 0) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
 
+    header('Location: confirmarContraseña.php');
+	die;
 } else {
 	$_SESSION['error'] = true;
 	$_SESSION['msj'] = 'Email no registrado';
-	header('Location: contraseñaOlvidada.php');
+	header('Location: contraseñaOlvidda.php');
 	die;
 }
