@@ -156,7 +156,20 @@
     font-family: Roboto;
     color: var(--fontColor);
 }
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (orientation: portrait) {
+    .forgot-container {
 
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin-left: 1rem;
+        margin-top: 49%;
+    
+    }
+  }
 
 
 

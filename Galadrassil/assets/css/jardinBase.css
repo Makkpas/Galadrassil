@@ -61,3 +61,41 @@
     width: 60vw;
     position: absolute;
 }
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (orientation: portrait) {
+
+    .garden {
+        background: var(--backgroudColor);
+        width: 60vw;
+        height: 201vh;
+        position: absolute;
+        top: 5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2rem;
+        display: flex;
+    }
+    .garden__button{
+        display: flex;
+        width: 46vw;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-48%);
+        height: auto;
+        align-content: space-evenly;
+    }
+    
+    .button__tree{
+        background: white;
+        border: white;
+        border-radius: 1rem;
+        margin: .5rem;
+    }
+
+} 

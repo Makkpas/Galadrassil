@@ -144,3 +144,19 @@
 .iconify--color{
     color: var(--fontColor);
 }
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (orientation: portrait) {
+    .header__tittle {
+        position: absolute;
+        left: 0;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 75px;
+        color: var(--backgroudColor);
+    }
+}

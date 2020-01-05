@@ -179,3 +179,37 @@ body{
     text-decoration: underline;
     opacity: 0.6;
 }
+
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (orientation: portrait) {
+
+    .login {
+
+        margin-top: 1rem;
+        position: absolute;
+        left: 200%;
+        transform: translateX(-150%);
+        text-decoration: none;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+    
+    }
+
+    .login-form {
+
+        height: 45%;
+        width: 25%;
+        left: 13vw;
+        position: absolute;
+    
+    }
+
+    
+}

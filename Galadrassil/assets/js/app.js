@@ -147,9 +147,10 @@ reverseModal = () =>{
     document.getElementById('b').className = "b";
 }
 playModal = () =>{
-    mo.play(); 
     
+    mo.play(); 
     document.getElementById('b').className = "b blur";
+    window.scrollTo(0, 0); 
 }
 
 play= () =>{
