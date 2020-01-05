@@ -32,6 +32,7 @@ session_start();
                 <form action="recContraConf.php" method="POST" class="email__form " autocomplete="on">
                     <input class="input__form form__password" type="password" id="password" name="password" placeholder="Contraseña">
                     <input class="input__form form__password2" type="password" id="password2" name="password2" placeholder="Confirme Contraseña">
+                    <input class="input__form form__code" type="text" id="code" name="code" placeholder="Codigo de Confirmación">
                     
 
                     <div class="container-btn">
