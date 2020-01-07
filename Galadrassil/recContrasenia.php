@@ -36,7 +36,7 @@ $existeEmail = $database->select('usuarios', ['usuario','email', 'password', 'na
 if (count($existeEmail) > 0) {
     
     $database->delete('recuperacion_password', [
-        'id_usuario' => $existeEmail[0]['id']]
+        'id_usuario' => $existeEmail[0]['id']
     ]);
 
     $database->insert('recuperacion_password', [
