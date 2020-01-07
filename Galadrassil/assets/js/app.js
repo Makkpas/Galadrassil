@@ -174,8 +174,9 @@ play= () =>{
 }
 
 function initCompometsHome(){
-    let buttonsTree = document.getElementsByClassName('button__tree');
     let buttonClose = document.getElementById('modal__close');
+    let buttonsTree = document.getElementsByClassName('button__tree');
+    let buttonCare = document.getElementsByClassName('care__button');
     let selectorButtonTree = document.getElementsByClassName('selector__button');
 
     for(var i=0; i<buttonsTree.length; i++){
@@ -221,6 +222,12 @@ function initCompometsHome(){
     }
     buttonClose.onclick = function(){
         reverseModal();
+    }
+
+    for(var i=0; i<buttonCare.length; i++){
+        buttonCare[i].onclick = function (){
+            console.log('esto es sad');
+        }
     }
 
 }
