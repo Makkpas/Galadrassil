@@ -20,7 +20,7 @@
         
 
         <main class="main">
-        <?php include './inc/jardinBase.php'?>
+        <?php include './inc/cruck.php'?>
         </main>
 
         <footer class="footer">
