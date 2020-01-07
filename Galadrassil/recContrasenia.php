@@ -38,6 +38,7 @@ if (count($existeEmail) > 0) {
         'codigo_confirmacion' => $cod,
         'id_usuario' => $existeEmail[0]['id']
     ]);   
+    $_SESSION['id']=$existeEmail[0]['id'];  // para saber cual es el usuario que solicita el cambio guardamos su id en sesión
 
     $mail = new PHPMailer(true);
 
@@ -58,8 +59,8 @@ if (count($existeEmail) > 0) {
 
             // contenido
             $mail->isHTML(true);                                  
-            $mail->Subject = 'Codigo Confirmacion';
-            $mail->Body    = $cod;
+            $mail->Subject = 'Asistencia Galadrassil';
+            $mail->Body    = 'Su código de verificación es:' . $cod;
 
             $mail->send();
             echo 'Message has been sent';
