@@ -147,7 +147,6 @@ reverseModal = () =>{
     document.getElementById('b').className = "b";
 }
 playModal = () =>{
-    
     mo.play(); 
     document.getElementById('b').className = "b blur";
     window.scrollTo(0, 0); 
@@ -187,31 +186,36 @@ function initCompometsHome(){
     for(let i=0; i<selectorButtonTree.length; i++){
         selectorButtonTree[i].onclick = function (){
             // let id = selectorButtonTree[i].classList.contains(i);
-            let treeImg = document.getElementsByClassName('tree__img');
-
-            // treeImg.innerHTML = 'src="../img/"'+i+'""';
-            console.log(i);
+            let treeImg = document.getElementsByClassName('tree');
+            let modalSelector = document.getElementById('modal__selector');
+            let modalCare = document.getElementById('modal__care');
+           
 
             if(i == 0){
-                // treeImg.innerHTML = '<img class="tree__img"src="../img/t_0" alt="">';
-                console.log("Planto arbol 0");
+                modalSelector.className = "hidden";
+                modalCare.className = "modal__care";
+                // treeImg.innerHTML='<img class="tree__img" src="./img/t_pochote_0.png" />';
                 
             }
             if(i == 1){
                 // treeImg.innerHTML = '<img class="tree__img"src="../img/t_1" alt="">';
                 console.log("Planto arbol 1");
+                modalSelector.className = "hidden";
             }
             if(i == 2){
                 // treeImg.innerHTML = '<img class="tree__img"src="../img/t_2" alt="">';
                 console.log("Planto arbol 2");
+                modalSelector.className = "hidden";
             }
             if(i == 3){
                 // treeImg.innerHTML = '<img class="tree__img"src="../img/t_3" alt="">';
                 console.log("Planto arbol 3");
+                modalSelector.className = "hidden";
             }
             if(i == 4){
                 // treeImg.innerHTML = '<img class="tree__img"src="../img/t_4" alt="">';
                 console.log("Planto arbol 4");
+                modalSelector.className = "hidden";
             }
         }
     }

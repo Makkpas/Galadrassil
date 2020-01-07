@@ -51,9 +51,18 @@
 }
 
 .modal__selector{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 25%;
+}
+.modal__care{
     width: 20vw;
-    height: 40vh;
-    display: grid;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .modal__close{
@@ -65,7 +74,7 @@
     right: 0;
 }
 
-.selector__button{
+.selector__button, .care__button{
     border-radius: 2rem;
     background: white;
     border: none;
@@ -73,12 +82,19 @@
     font-weight: 700;
     color: #00b17c;
     margin: .5rem 0;
+    padding: .5rem .5rem;
 }
 
 .tree{
     width: 20vw;
     height: 50vh;
-    background: rgb(0, 87, 99);;
+    background: white;
+    border-radius: 1rem;
+}
+
+.tree__img{
+    width: 10vw;
+    
 }
 
 @media screen 
