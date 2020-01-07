@@ -1,7 +1,8 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 :root{
@@ -41,8 +42,13 @@
 
 .nav{
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     right: 0;
     z-index: 2;
 }
@@ -57,12 +63,18 @@
 .nav__list{
     height: 10rem;
     width: 11rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
     top: 25vh;
     right: 0vw;
-    justify-content: space-around; 
+    -ms-flex-pack: distribute;
+        justify-content: space-around; 
     list-style: none;
 }
 
@@ -87,3 +99,6 @@
 #reverse{
     color:var(--btnReverse)
 }
+
+
+

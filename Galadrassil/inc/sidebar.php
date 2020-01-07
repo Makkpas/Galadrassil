@@ -10,9 +10,9 @@
             <li><button id="home" class="list nav__home hidden">Jardín</button></li>
             <li><button id="score" class="list nav__score hidden">Puntajes</button></li>
             <li><button id="profile" class="list nav__profile hidden">Perfil</button></li>
-            <li><button id="close" class="list nav__close hidden">Cerrar</button></li>
+            <li><a href="cerrar_sesion.php" id="close" class="list nav__close hidden">Cerrar</a></li>
             <li><button id="signin" class="list nav__signin">Registro</button></li>
-            <li><a href="cerrar_sesion.php" id="login" class="list nav__login">Iniciar Sesion</a></li>
+            <li><button id="login" class="list nav__login">Iniciar Sesion</button></li>
         </ul>
         
     </section>
